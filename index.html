@@ -25,8 +25,8 @@
 
         <!-- <input type="checkbox" v-model="todo.isDone"> -->
         <input type="text" :class="{done: todo.isDone}" v-model="todo.title">
-        <span @click="up(index)" class="command"><i class="fas fa-angle-up fa-2x"></i></span>
-        <span @click="down(index)" class="command"><i class="fas fa-angle-down fa-2x"></i></span>
+        <span @click="up(index)" class="command"><i class="fas fa-angle-up"></i></span>
+        <span @click="down(index)" class="command"><i class="fas fa-angle-down"></i></span>
       </li>
     </ul>
 
