@@ -184,7 +184,7 @@ input[type="checkbox"]:checked + label:before {
     width: 100%;
   }
   li {
-    margin-bottom: 10px;
+    margin-bottom: 50px;
   }
   #app input[type="text"] {
     width: 55%;
@@ -199,8 +199,8 @@ input[type="checkbox"]:checked + label:before {
     left: 30px;
   }
   .btn-flat-logo {
-    font-size: 20px;
-    padding: .7rem;
+    font-size: 25px;
+    padding: 1.3rem;
   }
   .fa-angle-up, .fa-angle-down {
     margin-left: 20px;
