@@ -14,6 +14,7 @@ body {
 .fa-angle-up, .fa-angle-down {
   color: #6cc0e5;
   margin-left: 10px;
+  font-size: 2em;
 }
 
 #app h1 {
@@ -182,19 +183,28 @@ input[type="checkbox"]:checked + label:before {
   .container {
     width: 100%;
   }
+  li {
+    margin-bottom: 10px;
+  }
   #app input[type="text"] {
-    width: 60%;
+    width: 55%;
     margin-left: 60px;
   }
   input[type="checkbox"] + label:before {
     left: 20px;
+    width: 30px;
+    height: 30px;
   }
   input[type="checkbox"]:checked + label:before {
-    left: 25px;
+    left: 30px;
   }
   .btn-flat-logo {
     font-size: 20px;
     padding: .7rem;
+  }
+  .fa-angle-up, .fa-angle-down {
+    margin-left: 20px;
+    font-size: 3em;
   }
 }
 /*# sourceMappingURL=styles.css.map */
