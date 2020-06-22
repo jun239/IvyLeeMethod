@@ -1,0 +1,192 @@
+body {
+  font-size: 16px;
+  font-family: Verdana, sans-serif;
+  background: #eee;
+}
+
+.container {
+  width: 900px;
+  margin: auto;
+  text-align: center;
+}
+.fa-angle-up, .fa-angle-down {
+  color: #6cc0e5;
+  margin-left: 10px;
+}
+
+#app {
+  h1 {
+    padding: 16px 0;
+    font-size: 23px;
+    color: #555;
+  }
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    line-height: 1.5;
+    height: 30px;
+    > span.done {
+      text-decoration: line-through;
+      color: #bbb;
+    }
+  }
+  input[type="text"] {
+    padding: 2px;
+    margin-left: 40px;
+    border: none;
+    border-bottom: 1px solid #bbb;
+    width: 85%;
+    height: 100%;
+    font-size: 20px;
+    background: #eee;
+    &:focus {
+      outline: none;
+    }
+  }
+  .done {
+    color: #ccc;
+    text-decoration: line-through;
+  }
+}
+
+.command {
+  font-size: 12px;
+  cursor: pointer;
+  color: #08c;
+}
+
+.info {
+  color: #bbb;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+/*Checkboxes styles*/
+input[type="checkbox"] { display: none; }
+
+input[type="checkbox"] + label {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 20px;
+  font: 14px/20px 'Open Sans', Arial, sans-serif;
+  color: #ddd;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+input[type="checkbox"] + label:last-child { margin-bottom: 0; }
+
+input[type="checkbox"] + label:before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #6cc0e5;
+  position: absolute;
+  left: 0;
+  top: 8px;
+  opacity: .6;
+  -webkit-transition: all .12s, border-color .08s;
+  transition: all .12s, border-color .08s;
+}
+
+input[type="checkbox"]:checked + label:before {
+  width: 10px;
+  top: 3px;
+  left: 5px;
+  border-radius: 0;
+  opacity: 1;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/*Checkboxes styles-end*/
+
+/* btnStyle-start */
+.btn-flat-logo {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  text-decoration: none;
+  color: #FFF;
+  background: #00bcd4;
+  transition: .4s;
+  border: none;
+  padding: .5rem;
+  margin-top: 30px;
+  i {
+    margin-right: 5px;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.btn-flat-logo:hover {
+  background: #1ec7bb;
+}
+/* btnStyle-end */
+
+/* PCのみ定義 */
+@media screen and (min-width: 768px) {
+  /* titleStyle-start */
+  .double{
+    width:100%;
+    text-align:center;
+  }
+  .double h1{
+    position:relative;
+    display:inline-block;
+  }
+  .double h1:before, .double h1:after{
+    content:"";
+    display:block;
+    width:200px;
+    height:4px;
+    border-top:1px solid #555;
+    border-bottom:1px solid #555;
+    position:absolute;
+    top:50%;
+    margin-top:-2px;
+  }
+  .double h1:before{left:-224px;}
+  .double h1:after{right:-224px;}
+  /* titleStyle-start */
+}
+
+/* スマホのみ定義 */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+  #app {
+    input[type="text"]{
+      width: 60%;
+      margin-left: 60px;
+    }
+  }
+  input[type="checkbox"]{
+    + label {
+      &:before {
+        left: 20px;
+      }
+    }
+    &:checked {
+      + label {
+        &:before {
+          left: 25px;
+        }
+      }
+    }
+  }
+  .btn-flat-logo {
+    font-size: 20px;
+    padding: .7rem;
+  }
+}
